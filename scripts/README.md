@@ -50,3 +50,34 @@ Follow the installation instructions of ViSQOL from its [GitHub repository](http
 
 ### Check histogram for generated scores
 - `python check_histogram.py <output_dataset_file.csv>`
+
+## Spectrograms format
+
+``` Python
+
+def min_max_normalise(values):
+    _min, _max = np.min(values), np.max(values)
+    return (values - _min) / (_max - _min)
+
+def mos_normalise(values):
+    return (values - 1) / 4
+
+TIME = 10
+SR = 48000
+N_FFT = 2048
+HOP_LENGTH = 256
+N_MELS = 256
+
+audio, _ = librosa.load(filename, sr=SR)
+audio = audio[:TIME * SR]
+# mel spectrograms
+spectrogram = librosa.feature.melspectrogram(y=audio, sr=SR, n_fft=N_FFT, hop_length=HOP_LENGTH, n_mels=N_MELS)
+spectrogram = librosa.power_to_db(spectrogram, ref=np.max)
+spectrogram = np.rot90(spectrogram)
+# normalisation
+spectrogram = min_max_normalise(spectrogram)
+mos = mos_normalise(row.moslqo)
+
+```
+
+Full code in [dataset.py](/scripts/dataset.py)
