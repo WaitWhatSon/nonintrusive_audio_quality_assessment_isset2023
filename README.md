@@ -10,6 +10,12 @@ The repository contains selected scripts, data and models from the experiments. 
 - [scripts](scripts) - scripts required to generate the dataset: degradation processess, samples trimming and normalisation, generating spectrograms etc.
 
 ## Authors
-Aleksandra Kasperuk, Sławomir K. Zieliński\
-Faculty of Computer Science, Białystok University of Technology, 15-351 Białystok, Poland\
-email addresses: aleksandra.kasperuk.105570@student.pb.edu.pl; s.zielinski@pb.edu.pl\
+Aleksandra Kasperuk, Sławomir K. Zieliński
+
+Faculty of Computer Science\
+Białystok University of Technology\
+15-351 Białystok, Poland
+
+email addresses: 
+- aleksandra.kasperuk.105570@student.pb.edu.pl
+- s.zielinski@pb.edu.pl
