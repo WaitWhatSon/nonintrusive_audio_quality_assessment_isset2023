@@ -1,5 +1,4 @@
-# Non-intrusive method for audio quality assessment of lossy-compressed music recordings using convolutional neural networks
-## Software repository
+# Software repository: Non-intrusive method for audio quality assessment of lossy-compressed music recordings using convolutional neural networks
 
 The repository contains selected scripts, data and models from the experiments. Some of the needed data has not been made public due to third-party copyrights and GitHub restrictions.
 
